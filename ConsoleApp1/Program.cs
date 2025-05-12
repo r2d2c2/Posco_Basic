@@ -56,6 +56,10 @@
             User user=new User();
             user.Spend();
 
+            // 가비지 컬렉션 강제 실행
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+
             #endregion
 
         }

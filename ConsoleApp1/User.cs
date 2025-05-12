@@ -18,6 +18,12 @@ namespace ConsoleApp1
             VendingMachine vm = new VendingMachine();
             Console.WriteLine("돈 투입");
             vm.Dispense(money);
+          
+        }
+
+        ~User()
+        {
+            Console.WriteLine("돈 지불 끝");
         }
     }
 }

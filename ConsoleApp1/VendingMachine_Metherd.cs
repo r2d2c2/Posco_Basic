@@ -21,5 +21,6 @@ namespace ConsoleApp1
                 return i - price;
             }
         }
+
     }
 }

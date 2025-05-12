@@ -11,5 +11,9 @@ namespace ConsoleApp1
         public VendingMachine() {
             price = 10000;
         }
+        ~VendingMachine()
+        {
+            Console.WriteLine("자판기 작동끝");
+        }
     }
 }
