@@ -18,27 +18,54 @@ namespace WindowsFormsApp2
             T[] arr=new T[1];
             public void Add(T item)
             {
-                if (arr.Count() >= count)
+                if (arr.Count() <= count)
                 {// 배열이 가득 차면
+   
                     T[] myArr = new T[arr.Length * 2];
                     // *2배열을 만들어 이동
                     for (int i = 0; i < arr.Length; i++)
                     {
-                        arr[i]=myArr[i];
+                        myArr[i]=arr[i];
                     }
-                    arr = myArr;    
-                    count++;
+                    arr = myArr;
                     arr[count] = item;
+                    count++;
                 }
                 else
                 {
                     arr[count] = item;
+                    count++;
+                }
+            }
+            public void RemoveAT(int index)
+            {
+                if (index < 0 || index >= arr.Length)
+                {
+                    Console.WriteLine("잘못된 인덱스");
+                }
+                else
+                {
+                    for (int i = index; i < arr.Length - 1; i++)
+                    {
+                        arr[i] = arr[i + 1];
+                    }
+                    arr[count-1] = default(T);
+                    count--;
                 }
             }
         }
         public Form1()
         {
             InitializeComponent();
+
+            MyList<int> myList = new MyList<int>();
+            myList.Add(1);
+            myList.Add(2);
+            myList.Add(3);
+            myList.Add(4);
+
+            myList.RemoveAT(3);
+
             Console.ReadLine();
             Console.WriteLine("================new Square 클레스 입니다==============");
             Square s1 = new Square();

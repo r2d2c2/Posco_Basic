@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace WindowsFormsApp_09_Class
 {
-    internal partial class User
+    internal interface Interface1
     {
-        public int money;
+        bool isInterface { get; set; } 
     }
 }

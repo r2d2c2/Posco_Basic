@@ -8,6 +8,14 @@ namespace ConsoleApp1
 {
     internal partial class User
     {
-        public int money;
+
+        public User()
+        {
+            money = 10000;
+        }
+        ~User()
+        {
+            Console.WriteLine("돈 지불 끝");
+        }
     }
 }
