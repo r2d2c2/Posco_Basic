@@ -37,7 +37,7 @@ namespace WindowsFormsApp_Try_Runing
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
