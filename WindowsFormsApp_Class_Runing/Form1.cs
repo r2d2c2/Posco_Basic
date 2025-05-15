@@ -15,6 +15,12 @@ namespace WindowsFormsApp_Class_Runing
         public Form1()
         {
             InitializeComponent();
+
+            Game game = new Game();
+            while (true)
+            {
+                game.Process();
+            }
         }
     }
 }

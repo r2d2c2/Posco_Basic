@@ -20,7 +20,7 @@ namespace WindowsFormsApp_Try_Runing
             {
                 Console.Write("닉네임을 입력하세요");
                 name = Console.ReadLine();
-                if(string.IsNullOrEmpty(name))
+                if(string.IsNullOrWhiteSpace(name))
                 {
                     throw new Exception("닉네임을 입력하세요");
                 }
