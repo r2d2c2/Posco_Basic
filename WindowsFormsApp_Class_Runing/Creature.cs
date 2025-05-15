@@ -17,6 +17,9 @@ namespace WindowsFormsApp_Class_Runing
         CreatureType type = CreatureType.None;
         protected int hp = 0;
         protected int attack = 0;
+
+        public virtual string Talk(PlayerType playerType) { return null; }
+
         public Creature(CreatureType type)
         {
             this.type = type;

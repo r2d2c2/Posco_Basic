@@ -21,6 +21,7 @@ namespace WindowsFormsApp_Class_Runing
             {
                 game.Process();
             }
+            
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp_Class_Runing
 {
@@ -12,6 +13,8 @@ namespace WindowsFormsApp_Class_Runing
         Town,
         Dungeon,
         Field,
+        //npc와 대화
+        Npc,
     }
     internal class Game
     {
@@ -19,7 +22,7 @@ namespace WindowsFormsApp_Class_Runing
         private Player player;
         private Monster monster;
         Random random = new Random();
-        public void Process()
+        public void Process()// update하면서 해당 모드에 맞는 프로세스를 실행
         {
             switch (mode)
             {
@@ -31,6 +34,9 @@ namespace WindowsFormsApp_Class_Runing
                     break;
                 case GameMode.Field:
                     ProcessField();
+                    break;
+                case GameMode.Npc:
+                    ProcessNpc();
                     break;
 
             }
@@ -80,6 +86,7 @@ namespace WindowsFormsApp_Class_Runing
                 {
                     Console.WriteLine("몬스터를 처치하였습니다.");
                     Console.WriteLine($"남은 체력은 {player.GetHp()}");
+                    player.LevelUp();
                     break;
                 }
                 damage = monster.GetAttack();
@@ -114,6 +121,7 @@ namespace WindowsFormsApp_Class_Runing
             Console.WriteLine("마을에 입장했습니다");
             Console.WriteLine("1 필드로 가기");
             Console.WriteLine("2 로비로 가기");
+            Console.WriteLine("3 npc와 대화");
             string input = Console.ReadLine();
 
             switch (input)
@@ -124,8 +132,27 @@ namespace WindowsFormsApp_Class_Runing
                 case "2":
                     mode = GameMode.Lobby;
                     break;
+                case "3":
+                    mode= GameMode.Npc;
+                    break;
             }
         }
+        // npc와 대화
+        private void ProcessNpc()
+        {
+            Console.WriteLine("Hey, you. You're finally awake.");
+            Console.WriteLine("1. 대화를 종료 합니다...");
+            string input = Console.ReadLine();
+            switch (input)
+            {
+                case "1":
+                    mode = GameMode.Town;
+                    break;
+                default:
+                    break;
+            }
+        }
+
         private void ProcessLobby()
         {
             Console.WriteLine("직업을 선택 하세요");
@@ -136,10 +163,13 @@ namespace WindowsFormsApp_Class_Runing
             {
                 case "1":
                     player = new Warrior();
-                    mode=GameMode.Town;
+                    MessageBox.Show(player.Talk(PlayerType.Warrior));
+                    
+                    mode =GameMode.Town;
                     break;
                 case "2":
                     player = new Wizard();
+                    MessageBox.Show(player.Talk(PlayerType.Wizard));
                     mode = GameMode.Town;
                     break;
                 default:
