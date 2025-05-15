@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="WindowsFormsApp_Class_Runing.Creature" Collapsed="true">
-    <Position X="3.75" Y="0.5" Width="1.5" />
+  <Class Name="WindowsFormsApp_Class_Runing.Creature">
+    <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAABBAGAAABADAAAIAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAABBAGAAEBADAAAIAA=</HashCode>
       <FileName>Creature.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -21,45 +21,45 @@
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WindowsFormsApp_Class_Runing.Monster" Collapsed="true">
-    <Position X="1.5" Y="1.75" Width="1.5" />
+  <Class Name="WindowsFormsApp_Class_Runing.Monster">
+    <Position X="1.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Monster.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WindowsFormsApp_Class_Runing.Orc" Collapsed="true">
-    <Position X="2.75" Y="3.25" Width="1.5" />
+  <Class Name="WindowsFormsApp_Class_Runing.Orc">
+    <Position X="2.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Monster.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WindowsFormsApp_Class_Runing.Slime" Collapsed="true">
+  <Class Name="WindowsFormsApp_Class_Runing.Slime">
     <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Monster.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WindowsFormsApp_Class_Runing.Player" Collapsed="true">
+  <Class Name="WindowsFormsApp_Class_Runing.Player">
     <Position X="6" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAABAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAFAAABAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WindowsFormsApp_Class_Runing.Warrior" Collapsed="true">
-    <Position X="7.25" Y="3.25" Width="1.5" />
+  <Class Name="WindowsFormsApp_Class_Runing.Warrior">
+    <Position X="7.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WindowsFormsApp_Class_Runing.Wizard" Collapsed="true">
-    <Position X="5" Y="3.25" Width="1.5" />
+  <Class Name="WindowsFormsApp_Class_Runing.Wizard">
+    <Position X="4.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Class>
