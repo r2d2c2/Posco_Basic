@@ -48,9 +48,9 @@ namespace WindowsFormsApp_Event
 
             EventManager eventManager = new EventManager(); //이벤트 매니저 객체 생성
             eventManager.AddEvent(Print); //이벤트 핸들러 등록
-            eventManager.TriggerEvent("이벤트 발생"); //이벤트 발생 메서드 호출
+            eventManager.TriggerEvent("이벤트1"); //이벤트 발생 메서드 호출
             eventManager.RemoveEvent(Print); //이벤트 핸들러 해제
-            eventManager.TriggerEvent("이벤트 발생"); //이벤트 발생 메서드 호출
+            eventManager.TriggerEvent("이벤트2"); //이벤트 발생 메서드 호출
 
         }
     }
