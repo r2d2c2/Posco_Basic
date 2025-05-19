@@ -20,6 +20,17 @@ namespace WindowsFormsApp_Event
         {
             Console.WriteLine("알람 울림");
         }
+        public event EventHandler MyEvent;// object sender, EventArgs e 포함
+        // 수동으로 번튼 이벤트 생성
+        private void ConsoleMessage(object sender, EventArgs e)
+        {
+            Console.WriteLine("이벤트 발생");
+        }
+        private void BtnTrigger(object sender, EventArgs e)
+        {
+            //MyEvent?.Invoke(this, e); //이벤트 발생
+            MyEvent?.Invoke(this,EventArgs.Empty); //이벤트 발생
+        }
         public Form1()
         {
             InitializeComponent();
@@ -28,11 +39,21 @@ namespace WindowsFormsApp_Event
             alarm.OnRing+=AlarmMessage;
             alarm.OnRing();
 
+            MyEvent += ConsoleMessage;
+
+            button1.Click += MyEvent;
+
             Alarm2 alarm2=new Alarm2();
             alarm2.OnRing += AlarmMessage;
             //alarm2.OnRing();//(컴파일 오류) 이벤트는 메서드처럼 호출할 수 없다.
             alarm2.Trigger(); //Trigger() 메서드를 통해 호출해야 한다.
         }
+
+        private void Form1_MyEvent(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         public class Alarm
         {
             public Notify OnRing;
