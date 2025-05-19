@@ -35,7 +35,11 @@ namespace WindowsFormsApp_Event
             }
             public void TriggerEvent(string message) //이벤트 발생 메서드
             {
-                MyEvent?.Invoke($"이벤트 카운트 : {dic.Count}, 매개변수 : {message}"); //이벤트가 null이 아닐 때만 호출
+                // 딕셔너리 안에 있는 이벤트 호출(message 검색)
+                foreach (var item in dic) //딕셔너리의 모든 항목에 대해 반복
+                {
+                    Console.WriteLine($"이벤트 카운트 : {item.Key}, 매개변수 : {message}"); //이벤트 카운트와 매개변수 출력
+                }
             }
         }
         static void Print(string message) //이벤트 핸들러 메서드
