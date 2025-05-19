@@ -35,7 +35,7 @@ namespace WindowsFormsApp_Event
             }
             public void TriggerEvent(string message) //이벤트 발생 메서드
             {
-                MyEvent?.Invoke(message); //이벤트가 null이 아닐 때만 호출
+                MyEvent?.Invoke($"이벤트 카운트 : {dic.Count}, 매개변수 : {message}"); //이벤트가 null이 아닐 때만 호출
             }
         }
         static void Print(string message) //이벤트 핸들러 메서드
