@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp_Delegate", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp3", "WindowsFormsApp3\WindowsFormsApp3.csproj", "{C1711BBC-114A-48D5-B87B-FB9FB2FE1E06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp_Event", "WindowsFormsApp_Event\WindowsFormsApp_Event.csproj", "{E6CA9A88-55F7-487B-932A-99465546D572}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{C1711BBC-114A-48D5-B87B-FB9FB2FE1E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1711BBC-114A-48D5-B87B-FB9FB2FE1E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1711BBC-114A-48D5-B87B-FB9FB2FE1E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6CA9A88-55F7-487B-932A-99465546D572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6CA9A88-55F7-487B-932A-99465546D572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6CA9A88-55F7-487B-932A-99465546D572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6CA9A88-55F7-487B-932A-99465546D572}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
